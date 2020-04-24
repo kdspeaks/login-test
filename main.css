@@ -242,10 +242,12 @@ a {
 	-webkit-transform: scaleX(1.1);
 	        transform: scaleX(1.1);
 	cursor: pointer;
+	color: #fff;
 }
 @media (min-width: 768px) {
 .close-icon {
 	top: 20px;
-	right: 25px
+	right: 25px;
+	color: #0d82df
 }
 	}
