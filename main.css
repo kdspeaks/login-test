@@ -1,0 +1,251 @@
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #000;
+	font-family: 'Philosopher', sans-serif;
+}
+body::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8)), color-stop(60%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8))), url('https://images.pexels.com/photos/3573351/pexels-photo-3573351.png');
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url('https://images.pexels.com/photos/3573351/pexels-photo-3573351.png');
+	background-size: cover;
+	-webkit-filter: blur(10px);
+	        filter: blur(10px);
+	z-index: -1;
+
+}
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+a {
+	color: #0d82df;
+	text-decoration: none;
+}
+.container {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	padding: 25px;
+	opacity: 0;
+	z-index: -1;
+	-webkit-transform: scale(0.5);
+	        transform: scale(0.5);
+	-webkit-transition: all.3s ease-out;
+	transition: all.3s ease-out;
+
+}
+.container--is-visible {
+		opacity: 1;
+		z-index: 1;
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+.main {
+	background-color: #fff;
+	margin: auto;
+	width: 1180px;
+	border-radius: 20px;
+	overflow: hidden;
+	position: relative;
+}
+@media (min-width: 768px) {
+.main {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		border-radius: 40px
+}
+	}
+.main-overlay {
+		padding: 1px 25px;
+		background: -webkit-gradient(linear, left top, left bottom, from(rgba(13,130,223, .85)), to(rgba(13,130,223, .85))), url('https://images.pexels.com/photos/1173777/pexels-photo-1173777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+		background: linear-gradient(rgba(13,130,223, .85), rgba(13,130,223, .85)), url('https://images.pexels.com/photos/1173777/pexels-photo-1173777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+		background-size: cover;
+		color: #fff;
+	}
+@media (min-width: 768px) {
+.main-overlay {
+			-webkit-box-flex: 2;
+			-webkit-flex: 2;
+			    -ms-flex: 2;
+			        flex: 2;
+			padding: 40px
+	}
+	}
+@media (min-width: 960px) {
+.main-overlay {
+			padding: 80px
+	}
+	}
+.main-overlay p {
+			font-size: 1.1rem;
+		}
+@media (min-width: 960px) {
+.main-overlay p {
+				font-size: 1.3rem
+		}
+	}
+.main-overlay__title {
+			font-weight: 700;
+			margin-top: 15px;
+			font-size: 1.9rem;
+			margin-bottom: 5px;
+		}
+@media (min-width: 768px) {
+.main-overlay__title {
+				font-size: 2.75rem;
+				margin-bottom: 25px;
+				margin-top: 0
+		}
+	}
+.main-form {
+		padding: 10px 25px;		
+	}
+@media (min-width: 768px) {
+.main-form {
+			-webkit-box-flex: 3;
+			-webkit-flex: 3;
+			    -ms-flex: 3;
+			        flex: 3;
+			padding: 40px		
+	}
+	}
+@media (min-width: 960px) {
+.main-form {
+			padding: 80px		
+	}
+	}
+.main-form__input-wrapper {
+			margin-bottom: 10px;
+			position: relative;
+			padding-top: 8px;
+			color: gray;
+		}
+@media (min-width: 768px) {
+.main-form__input-wrapper {
+				margin-bottom: 40px;
+				font-size: 1.1rem
+		}
+	}
+.main-form__input-wrapper--last-item {
+				margin-bottom: 0;
+			}
+.main-form__input {
+			width: 100%;
+			outline: none;
+			border: none;
+			border-bottom: 1px solid gray;
+			font-size: 1rem;
+			font-family: 'Philosopher', sans-serif;
+		}
+@media (min-width: 768px) {
+.main-form__input {
+				font-size: 1.2rem;
+				padding-bottom: 5px
+		}
+	}
+.main-form__input:focus ~ .main-form__label, .main-form__input:not(:placeholder-shown) ~ .main-form__label {
+				top: 0;
+				font-size: .8rem;
+				font-weight: bold;
+				color: #0d82df;
+			}
+@media (min-width: 768px) {
+.main-form__input:focus ~ .main-form__label, .main-form__input:not(:placeholder-shown) ~ .main-form__label {
+					top: -30%
+			}
+	}
+.main-form__input:focus, .main-form__input:not(:placeholder-shown) {
+				border-bottom: 1px solid #0d82df;
+			}
+.main-form__label {
+			position: absolute;
+			font-size: 1rem;
+			text-transform: uppercase;
+			color: gray;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			        transform: translateY(-50%);
+			left: 0;
+			-webkit-transition: all .3s ease-out;
+			transition: all .3s ease-out;
+		}
+@media (min-width: 768px) {
+.main-form__label {
+				font-size: 1.175rem
+		}
+	}
+.main-form__login-link {
+			margin-left: 10px;
+			font-size: 1.1rem;
+		}
+@media (min-width: 768px) {
+.main-form__login-link {
+				font-size: 1.3rem
+		}
+	}
+.btn {
+	background-color: #0d82df;
+	border: none;
+	color: #fff;
+	padding: 5px 10px;
+	display: inline-block;
+	font-size: 1rem;
+	cursor: pointer;
+	font-family: 'Philosopher', sans-serif;
+}
+.btn:hover {
+		background-color: #04508c;
+	}
+.btn:hover a:hover {
+			text-decoration: none;
+		}
+@media (min-width: 768px) {
+.btn {
+		padding: 10px 30px;
+		font-size: 1.2rem
+}
+	}
+.login-container {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	height: 100vh;
+}
+.login {
+	display: block;
+	margin: auto;
+}
+.close-icon {
+	position: absolute;
+	top: 3px;
+	right: 10px;
+	font-size: 30px;
+	font-family: sans-serif;
+	display: block;
+	-webkit-transform: scaleX(1.1);
+	        transform: scaleX(1.1);
+	cursor: pointer;
+}
+@media (min-width: 768px) {
+.close-icon {
+	top: 20px;
+	right: 25px
+}
+	}
